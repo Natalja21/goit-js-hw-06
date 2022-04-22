@@ -18,7 +18,16 @@ const onFormSubmit =(event) =>{
     }
     
     const formData = new FormData(event.currentTarget);
-    formData.forEach((value, name) => console.log(name, value));
+    formData.forEach((value, name) => {
+        const dataElements = {
+            name,
+            value
+    
+        }
+        console.log(dataElements)
+    }
+    
+    );
     form.reset();
 };
 form.addEventListener("submit", onFormSubmit);
