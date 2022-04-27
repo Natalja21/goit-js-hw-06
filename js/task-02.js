@@ -14,13 +14,12 @@ const ingredients = [
 ];
 
 const createItems = ingredients.map((ingredient) => {
- 
   const itemIngredientsEl = document.createElement('li');
   itemIngredientsEl.classList.add('item');
   itemIngredientsEl.textContent = ingredient;
   return itemIngredientsEl;
-})
-;
+});
+
 const listIngredientsEl = document.querySelector('#ingredients');
 
 listIngredientsEl.append(...createItems);

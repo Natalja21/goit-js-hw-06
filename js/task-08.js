@@ -7,27 +7,19 @@
 // Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
 
 const form = document.querySelector('.login-form');
-const onFormSubmit =(event) =>{
+
+const onFormSubmit = (event) => {
     event.preventDefault();
     const formElements = event.currentTarget.elements;
-    const mail = formElements.email.value;
+    const email = formElements.email.value;
     const password = formElements.password.value;
-
-    if (mail === "" || password === "") {
-       alert("Please fill in all the fields!");
+    if (email === "" || password === "") {
+        alert("Please fill in all the fields!");
     }
-    
-    const formData = new FormData(event.currentTarget);
-    formData.forEach((value, name) => {
-        const dataElements = {
-            name,
-            value
-    
-        }
-        console.log(dataElements)
+    else {
+        console.log({email, password})
     }
-    
-    );
     form.reset();
 };
+
 form.addEventListener("submit", onFormSubmit);

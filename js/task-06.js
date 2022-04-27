@@ -10,12 +10,10 @@ const inputEl = document.getElementById('validation-input');
 
 const onValidationInputBlur = (event) => {
     if (event.currentTarget.value.length === Number(inputEl.dataset.length)) {
-        inputEl.classList.add('valid');
-        
+        inputEl.classList.add('valid');       
     }
     else {
-        inputEl.classList.add('invalid');
-        
+        inputEl.classList.add('invalid');        
     };
 }
 
