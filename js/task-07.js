@@ -6,6 +6,8 @@ const controlFont = document.getElementById("font-size-control");
 
 const text = document.getElementById("text");
 
+text.style.fontSize = controlFont.value + "px";
+
 const changeFontSize = (event) => text.style.fontSize = event.currentTarget.value + "px";
 
 controlFont.addEventListener('input', changeFontSize);

@@ -9,11 +9,13 @@
 const inputEl = document.getElementById('validation-input');
 
 const onValidationInputBlur = (event) => {
-    if (event.currentTarget.value.length === Number(inputEl.dataset.length)) {
-        inputEl.classList.add('valid');       
+    if (event.currentTarget.value.length === +event.currentTarget.dataset.length) {
+        event.currentTarget.classList.add('valid');
+        event.currentTarget.classList.remove('invalid');
     }
     else {
-        inputEl.classList.add('invalid');        
+        event.currentTarget.classList.add('invalid'); 
+        event.currentTarget.classList.remove('valid')
     };
 }
 

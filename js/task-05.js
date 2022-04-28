@@ -7,7 +7,7 @@ const inputEl = document.getElementById("name-input");
 const nameOutputEl = document.getElementById("name-output");
 
 const onInputChange = (event) => {  
-    if (inputEl.value === '') {
+    if (!event.currentTarget.value) {
         nameOutputEl.textContent = 'Anonymous';
     }
     else {
